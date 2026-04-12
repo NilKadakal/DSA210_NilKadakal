@@ -1,1 +1,22 @@
-
+Language,Avg_TIOBE_Rating,Avg_TIOBE_Rank,Months_Observed
+Python,17.9842,,12
+C++,10.3917,,12
+C,9.7525,,12
+Java,9.0633,,12
+C#,6.4,,12
+JavaScript,3.5017,,12
+Go,1.93,,12
+Visual Basic (.Net),1.9275,,12
+SQL,1.8133,,12
+Fortran,1.5942,,12
+Delphi,1.4858,,12
+PHP,1.3367,,12
+MATLAB,1.2733,,12
+Scratch,1.21,,12
+Assembly Language,1.1445,,11
+Rust,1.1408,,12
+Swift,1.1025,,12
+Ruby,1.0733,,12
+R,1.0517,,6
+Kotlin,1.002,,10
+Cobol,0.9456,,9
