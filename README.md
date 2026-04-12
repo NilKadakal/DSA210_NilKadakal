@@ -78,7 +78,7 @@ This step allows us to analyze whether **language popularity affects salary**.
 
 *Objective: Compare salaries based on work modality.*
 
-![Remote Work](outputs/figures/salary_by_remote.png)
+![Remote Work](outputs/figures/median_salary_by_remote_work.png)
 
 **Insights:**
 
@@ -91,7 +91,7 @@ This step allows us to analyze whether **language popularity affects salary**.
 
 *Objective: Compare salaries across languages.*
 
-![Top Languages](outputs/figures/top_languages_salary.png)
+![Top Languages](outputs/figures/median_salary_top_languages.png)
 
 **Insights:**
 
@@ -104,7 +104,7 @@ This step allows us to analyze whether **language popularity affects salary**.
 
 *Objective: Analyze relationship between popularity and salary.*
 
-![TIOBE vs Salary](outputs/figures/tiobe_vs_salary.png)
+![TIOBE vs Salary](outputs/figures/tiobe_vs_median_salary.png)
 
 **Insights:**
 
