@@ -1,7 +1,4 @@
-# DSA210_NilKadakal
-# What Makes a Developer Earn More?
-
-## A Data-Driven Analysis of Developer Salaries
+#A Data-Driven Analysis of Developer Salaries:  What Makes a Developer Earn More? 
 ---
 
 ## 1. Project Motivation
