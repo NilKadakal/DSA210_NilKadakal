@@ -2,7 +2,6 @@
 # What Makes a Developer Earn More?
 
 ## A Data-Driven Analysis of Developer Salaries
-**Student:** Nil Kadakal 33796 
 ---
 
 ## 1. Project Motivation
