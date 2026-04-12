@@ -115,31 +115,53 @@ This step allows us to analyze whether **language popularity affects salary**.
 
 ## 4. Statistical Hypothesis Testing
 
-To validate findings, formal statistical tests were performed.
+To validate the findings from exploratory data analysis, formal statistical tests were conducted.
 
 ---
 
-### Test 1: Salary Differences Across Languages (ANOVA)
+### Test 1: Salary Differences Across Programming Languages (ANOVA)
 
-* **Result:** p < 0.001
-* **Conclusion:** Salaries differ significantly across programming languages
+- **Null Hypothesis ($H_0$):** There is no significant difference in mean salaries across programming languages.  
+- **Alternative Hypothesis ($H_1$):** At least one programming language has a significantly different mean salary.  
+
+- **Test Used:** One-way ANOVA  
+- **Result:** p < 0.001  
+
+**Conclusion:**  
+The null hypothesis is rejected. Salaries differ significantly across programming languages, indicating that language choice is an important factor in salary determination.
 
 ---
 
-### Test 2: Remote vs In-Person (Welch t-test)
+### Test 2: Remote vs In-Person Work (Welch t-test)
 
-* **Result:** p < 0.001
-* **Conclusion:** Work modality significantly affects salary
+- **Null Hypothesis ($H_0$):** There is no difference in mean salaries between remote and in-person workers.  
+- **Alternative Hypothesis ($H_1$):** There is a significant difference in mean salaries between remote and in-person workers.  
+
+- **Test Used:** Welch Two-Sample t-test  
+- **Result:** p < 0.001  
+
+**Conclusion:**  
+The null hypothesis is rejected. Work modality (remote vs in-person) has a statistically significant impact on salary.
 
 ---
 
-### Test 3: Popularity vs Salary (Spearman Correlation)
+### Test 3: Programming Language Popularity vs Salary (Spearman Correlation)
 
-* **Correlation:** -0.27
-* **p-value:** 0.26
+- **Null Hypothesis ($H_0$):** There is no correlation between programming language popularity and salary.  
+- **Alternative Hypothesis ($H_1$):** There is a significant correlation between programming language popularity and salary.  
 
-**Conclusion:**
-No statistically significant relationship between popularity and salary
+- **Test Used:** Spearman Rank Correlation  
+- **Correlation Coefficient:** -0.27  
+- **p-value:** 0.26  
+
+**Conclusion:**  
+The null hypothesis cannot be rejected. There is no statistically significant relationship between programming language popularity and salary.
+
+---
+
+### Overall Interpretation
+
+The statistical results show that while programming language choice and work modality significantly influence salaries, programming language popularity does not have a meaningful effect. This suggests that structural factors play a more important role in salary determination than market popularity.
 
 ---
 
