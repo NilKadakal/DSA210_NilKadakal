@@ -238,5 +238,41 @@ This project demonstrates that developer salaries are shaped primarily by struct
 While language choice matters, popularity alone is not a reliable predictor of compensation.
 
 ---
+---
+
+## Academic Integrity
+
+This project is an original work created for the course **DSA 210 – Introduction to Data Science** at Sabancı University.
+
+All analysis, coding, and interpretations were conducted by the author. AI tools (such as large language models) were used only for assistance in debugging, code structuring, and improving clarity in written explanations, in accordance with Sabancı University’s academic integrity guidelines.
+
+---
+
+## Author
+
+**Nil Kadakal**  
+Sabancı University  
+Computer Science and Engineering  
+
+**Course:** DSA 210 – Introduction to Data Science  
+**Term:** Spring 2025–2026  
+
+---
+
+## Project Status
+
+**Completed:**
+- Data Collection  
+- Data Cleaning & Preprocessing  
+- Data Enrichment (TIOBE Index Integration)  
+- Exploratory Data Analysis (EDA)  
+- Statistical Hypothesis Testing  
+- Results Interpretation  
+
+---
+
+## Last Updated
+
+April 2026
 
 *This project was conducted for the Sabancı University DSA210 course.*
