@@ -1,4 +1,4 @@
-#A Data-Driven Analysis of Developer Salaries:  What Makes a Developer Earn More? 
+## A Data-Driven Analysis of Developer Salaries:  What Makes a Developer Earn More? 
 ---
 
 ## 1. Project Motivation
