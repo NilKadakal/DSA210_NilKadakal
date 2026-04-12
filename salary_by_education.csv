@@ -1,0 +1,9 @@
+EdLevel,count,median,mean
+"Professional degree (JD, MD, Ph.D, Ed.D, etc.)",1041,77000.0,92845.14024975985
+"Bachelor’s degree (B.A., B.S., B.Eng., etc.)",9460,67602.0,80840.36501057082
+"Master’s degree (M.A., M.S., M.Eng., MBA, etc.)",6098,67386.0,79543.16431616923
+"Associate degree (A.A., A.S., etc.)",677,61921.0,72576.28064992615
+Some college/university study without earning a degree,2420,59073.0,73531.86280991735
+Something else,186,53703.0,59734.096774193546
+Primary/elementary school,108,48870.0,67144.03703703704
+"Secondary school (e.g. American high school, German Realschule or Gymnasium, etc.)",1035,44818.0,53694.955555555556

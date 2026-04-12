@@ -1,0 +1,4 @@
+Test,Statistic,P_Value,Details
+ANOVA_LogSalary_Across_Languages,38.13421971230871,8.75e-321,"Languages included: JavaScript, SQL, HTML/CSS, Python, TypeScript, Bash, Java, C#, C++, PHP, C, PowerShell, Go, Rust, Kotlin"
+Welch_TTest_LogSalary_Remote_vs_InPerson,22.09316251138762,1.1624480939433227e-104,"Remote n=8043, In-person n=3721"
+Spearman_TIOBE_vs_MedianSalary,-0.27204917055115696,0.2598499882469161,Languages included: 19
