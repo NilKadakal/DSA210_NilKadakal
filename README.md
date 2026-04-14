@@ -19,6 +19,12 @@ In today’s software industry, developers often question which skills and condi
 * **TIOBE Index 2024**
   → Provides external data on programming language popularity
 
+### Processed Data
+
+Due to GitHub file size limitations, sampled versions of the processed datasets are included in this repository.
+
+Full processed datasets are available here:
+https://drive.google.com/drive/folders/1eua8dMro7d876svTu6Q2K29K2r_s9xxO?usp=sharing
 ---
 
 ### 2.2 Data Cleaning & Preparation
