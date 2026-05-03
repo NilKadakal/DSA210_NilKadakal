@@ -165,21 +165,113 @@ The null hypothesis cannot be rejected. There is no statistically significant re
 
 ---
 
+## 5. Machine Learning Models
+
+To extend the statistical analysis, supervised machine learning models were applied to predict developers' yearly compensation.
+
+The target variable was the log-transformed yearly compensation (`LogSalary`). Since salary values are highly right-skewed, predicting the logarithmic form of salary provides a more stable modeling target.
+
+### 5.1 Modeling Strategy
+
+Two model settings were compared:
+
+**Baseline models:**  
+The baseline models used only structural and demographic variables:
+
+- Years of professional coding experience
+- Total years of coding experience
+- Age group
+- Remote work status
+- Education level
+- Developer type
+- Organization size
+- Country
+
+**Extended models:**  
+The extended models added programming-language-related information:
+
+- Main programming language
+- Average TIOBE popularity rating
+- Number of months the language appeared in the TIOBE index
+
+This comparison was designed to test whether programming language popularity improves salary prediction after controlling for structural factors.
+
+### 5.2 Models Used
+
+The following models were trained and evaluated:
+
+- Ridge Regression
+- Random Forest Regressor
+
+The models were evaluated using:
+
+- Mean Absolute Error (MAE)
+- Root Mean Squared Error (RMSE)
+- R² score
+
+Because the dataset was expanded by programming language, the same developer could appear in multiple rows. To avoid data leakage, the train-test split was performed using `ResponseId` as a group variable.
+
+### 5.3 Model Performance
+
+| Model | MAE log | RMSE log | R² log | MAE USD | RMSE USD |
+|---|---:|---:|---:|---:|---:|
+| Extended Ridge Regression + TIOBE | 0.554 | 0.875 | 0.481 | 29,946 | 46,477 |
+| Baseline Ridge Regression | 0.555 | 0.879 | 0.476 | 29,989 | 46,420 |
+| Baseline Random Forest | 0.565 | 0.883 | 0.472 | 30,235 | 45,899 |
+| Extended Random Forest + TIOBE | 0.566 | 0.884 | 0.470 | 30,207 | 46,080 |
+
+![ML Model R2 Comparison](outputs/figures/ml_model_r2_comparison.png)
+
+### 5.4 Feature Importance
+
+The Random Forest feature importance results show that salary prediction is mostly driven by structural variables such as country and experience.
+
+![ML Feature Importance](outputs/figures/ml_top_feature_importance.png)
+
+The top Random Forest features were:
+
+| Feature | Importance |
+|---|---:|
+| Country: United States | 0.268 |
+| Years of Coding Experience | 0.171 |
+| Years of Professional Coding Experience | 0.166 |
+| Country: Infrequent Categories | 0.062 |
+| Country: Ukraine | 0.047 |
+| Country: India | 0.044 |
+| Country: Brazil | 0.028 |
+| Average TIOBE Rating | 0.023 |
+| Age: 18-24 years old | 0.012 |
+| Remote Work: In-person | 0.012 |
+
+### 5.5 Machine Learning Interpretation
+
+The machine learning results show that the Extended Ridge Regression model achieved the best overall R² score on the log-transformed salary target. Its R² value increased from 0.476 in the baseline Ridge model to 0.481 after adding programming language and TIOBE popularity features.
+
+Although this improvement is positive, the increase is relatively small. This suggests that programming language popularity contributes to salary prediction, but its marginal effect is limited when structural variables such as country, years of experience, education, organization size, and remote work status are already included.
+
+The Random Forest feature importance results also support this interpretation. The strongest predictor was whether the developer was located in the United States, followed by total coding experience and professional coding experience. The TIOBE popularity rating appeared among the top features, but its importance was much lower than country and experience-related variables.
+
+Overall, the ML findings support the main hypothesis of the project: developer salaries are influenced by programming language choice and popularity, but structural labor-market factors are more dominant in explaining salary formation.
+---
+
 ### Overall Interpretation
 
 The statistical results show that while programming language choice and work modality significantly influence salaries, programming language popularity does not have a meaningful effect. This suggests that structural factors play a more important role in salary determination than market popularity.
 
 ---
 
-## 5. Key Findings
+## 6. Key Findings
 
-* Programming language choice has a **significant impact** on salary
-* Remote work is a **significant factor** in salary differences
-* Programming language popularity does **not significantly affect salary**
+- Programming language choice has a significant impact on salary.
+- Remote work is a significant factor in salary differences.
+- Programming language popularity does not significantly affect salary in the statistical correlation test.
+- The best-performing ML model was the Extended Ridge Regression model with TIOBE features.
+- Adding language popularity slightly improved the Ridge Regression model, but the improvement was small.
+- Random Forest feature importance showed that country and experience were stronger predictors than TIOBE popularity.
 
 ---
 
-## 6. Interpretation
+## 7. Interpretation
 
 The results show that **structural factors**, such as experience and work conditions, play a much larger role in determining salary than programming language popularity.
 
@@ -187,14 +279,17 @@ Although popular languages dominate the market, they do not necessarily provide 
 
 This suggests that **real-world compensation is driven by demand, specialization, and context rather than popularity metrics alone.**
 
+The machine learning results further support this interpretation. While TIOBE popularity provided a small improvement in the Ridge Regression model, the strongest predictive signals came from country and experience. Therefore, language popularity should be interpreted as a secondary factor rather than a primary driver of salary.
+
 ---
 
-## 7. Project Structure
+## 8. Project Structure
 
 ```
 dsa210_salary_project/
 │
-├── Developer_Salary_Analysis.ipynb   # Main notebook (EDA + interpretation)
+├── Developer_Salary_Analysis.ipynb   # Main notebook for EDA and statistical analysis
+├── ml_salary_models.ipynb            # Machine learning models and evaluation
 ├── src/                              # Python scripts (pipeline)
 ├── data/                             # Raw and processed datasets
 ├── outputs/                          # Generated figures and tables
@@ -204,7 +299,7 @@ dsa210_salary_project/
 
 ---
 
-## 8. How to Run
+## 9. How to Run
 
 1. Install dependencies:
 
@@ -218,7 +313,13 @@ pip install -r requirements.txt
 python src/salary_analysis.py
 ```
 
-3. Open the notebook:
+3. Run the machine learning models:
+
+```bash
+python ml_salary_models.ipynb
+```
+
+4. Open the notebook:
 
 ```bash
 jupyter notebook Developer_Salary_Analysis.ipynb
@@ -226,7 +327,7 @@ jupyter notebook Developer_Salary_Analysis.ipynb
 
 ---
 
-## 9. Outputs
+## 10. Outputs
 
 All generated outputs are saved in:
 
@@ -237,11 +338,13 @@ outputs/tables/
 
 ---
 
-## 10. Conclusion
+## 11. Conclusion
 
-This project demonstrates that developer salaries are shaped primarily by structural and contextual factors, rather than programming language popularity.
+This project demonstrates that developer salaries are shaped primarily by structural and contextual factors, rather than programming language popularity alone.
 
-While language choice matters, popularity alone is not a reliable predictor of compensation.
+While programming language choice matters, popularity alone is not a reliable predictor of compensation. The machine learning results show that adding TIOBE popularity slightly improves the Ridge Regression model, but the strongest predictive factors are country and experience.
+
+Overall, the results suggest that real-world compensation is driven more by labor-market context, experience, and specialization than by general popularity metrics.
 
 ---
 ---
@@ -268,17 +371,20 @@ Computer Science and Engineering
 ## Project Status
 
 **Completed:**
-- Data Collection  
-- Data Cleaning & Preprocessing  
-- Data Enrichment (TIOBE Index Integration)  
-- Exploratory Data Analysis (EDA)  
-- Statistical Hypothesis Testing  
+- Data Collection
+- Data Cleaning & Preprocessing
+- Data Enrichment (TIOBE Index Integration)
+- Exploratory Data Analysis (EDA)
+- Statistical Hypothesis Testing
+- Machine Learning Modeling
+- Baseline vs Extended Model Comparison
+- Random Forest Feature Importance Analysis
 - Results Interpretation  
 
 ---
 
 ## Last Updated
 
-April 2026
+May 2026
 
 *This project was conducted for the Sabancı University DSA210 course.*
