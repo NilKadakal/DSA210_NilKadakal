@@ -1,0 +1,26 @@
+Feature,Importance
+cat__Country_United States of America,0.26831340013200716
+num__YearsCode_num,0.17053024051907306
+num__YearsCodePro_num,0.165962205843821
+cat__Country_infrequent_sklearn,0.06183809758761981
+cat__Country_Ukraine,0.047040020061637565
+cat__Country_India,0.043570854912924895
+cat__Country_Brazil,0.028471180537458157
+num__Avg_TIOBE_Rating,0.023095831236352844
+cat__Age_18-24 years old,0.011952219853825536
+cat__RemoteWork_In-person,0.011759170501253228
+cat__OrgSize_20 to 99 employees,0.00841649868007121
+cat__Age_35-44 years old,0.008206921834027233
+"cat__DevType_Developer, full-stack",0.007874972971262467
+"cat__RemoteWork_Hybrid (some remote, some in-person)",0.007319663318029343
+"cat__EdLevel_Master’s degree (M.A., M.S., M.Eng., MBA, etc.)",0.007176662663334791
+"cat__EdLevel_Bachelor’s degree (B.A., B.S., B.Eng., etc.)",0.007064441494965357
+cat__OrgSize_2 to 9 employees,0.006925428061137676
+cat__Age_25-34 years old,0.00586021069926044
+cat__OrgSize_10 to 19 employees,0.005774900145314673
+cat__RemoteWork_Remote,0.005570752273576551
+"cat__OrgSize_1,000 to 4,999 employees",0.0053268867926867195
+"cat__DevType_Developer, back-end",0.005306207845828498
+cat__EdLevel_Some college/university study without earning a degree,0.005162272892958012
+cat__Country_Russian Federation,0.005154599055273377
+cat__OrgSize_100 to 499 employees,0.005137015633073271
