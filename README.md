@@ -316,7 +316,7 @@ python src/salary_analysis.py
 3. Run the machine learning models:
 
 ```bash
-python ml_salary_models.ipynb
+jupyter notebook ml_salary_models.ipynb
 ```
 
 4. Open the notebook:
