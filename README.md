@@ -2,8 +2,10 @@
 ---
 ### Project Links
 
+- [Final Report](FINAL_REPORT.md)
 - [Interactive ML Salary Dashboard](https://nilkadakal.github.io/DSA210_NilKadakal/website/)
-
+- [Machine Learning Notebook](ml_salary_models.ipynb)
+- [Main EDA and Hypothesis Testing Notebook](Developer_Salary_Analysis.ipynb)
   
 ## 1. Project Motivation
 
@@ -401,6 +403,7 @@ Computer Science and Engineering
 ## Project Status
 
 **Completed:**
+
 - Data Collection
 - Data Cleaning & Preprocessing
 - Data Enrichment (TIOBE Index Integration)
@@ -409,8 +412,9 @@ Computer Science and Engineering
 - Machine Learning Modeling
 - Baseline vs Extended Model Comparison
 - Random Forest Feature Importance Analysis
-- Results Interpretation  
-
+- Interactive Project Website
+- Final Report
+- Results Interpretation
 ---
 
 ## Last Updated
