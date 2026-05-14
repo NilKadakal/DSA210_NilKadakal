@@ -1,6 +1,10 @@
 ## A Data-Driven Analysis of Developer Salaries:  What Makes a Developer Earn More? 
 ---
+### Project Links
 
+- [Interactive ML Salary Dashboard](https://nilkadakal.github.io/DSA210_NilKadakal/website/)
+
+  
 ## 1. Project Motivation
 
 In today’s software industry, developers often question which skills and conditions lead to higher salaries. While some believe that choosing popular programming languages leads to better compensation, others argue that structural factors such as experience and work conditions are more important.
@@ -260,7 +264,27 @@ The statistical results show that while programming language choice and work mod
 
 ---
 
-## 6. Key Findings
+## 6. Interactive Project Website
+
+An interactive project website was created as additional presentation material for the final project.
+
+Website link:
+
+[Interactive ML Salary Dashboard](https://nilkadakal.github.io/DSA210_NilKadakal/website/)
+
+The website summarizes the main results of the project in a visual and interactive format. It includes:
+
+- The main research conclusion
+- The best-performing machine learning model
+- Baseline vs extended model comparison
+- Random Forest feature importance results
+- Key findings from the EDA, hypothesis tests, and ML analysis
+- A scenario-based salary estimator calibrated according to the project findings
+
+The salary estimator should not be interpreted as an exact salary prediction tool. Instead, it is designed as an explanatory what-if interface that reflects the main analytical conclusion of the project: country and experience are stronger predictors of salary than programming language popularity alone.
+---
+
+## 7. Key Findings
 
 - Programming language choice has a significant impact on salary.
 - Remote work is a significant factor in salary differences.
@@ -271,7 +295,7 @@ The statistical results show that while programming language choice and work mod
 
 ---
 
-## 7. Interpretation
+## 8. Interpretation
 
 The results show that **structural factors**, such as experience and work conditions, play a much larger role in determining salary than programming language popularity.
 
@@ -283,23 +307,29 @@ The machine learning results further support this interpretation. While TIOBE po
 
 ---
 
-## 8. Project Structure
+## 9. Project Structure
 
-```
+```text
 dsa210_salary_project/
 │
-├── Developer_Salary_Analysis.ipynb   # Main notebook for EDA and statistical analysis
-├── ml_salary_models.ipynb            # Machine learning models and evaluation
-├── src/                              # Python scripts (pipeline)
-├── data/                             # Raw and processed datasets
-├── outputs/                          # Generated figures and tables
+├── Developer_Salary_Analysis.ipynb        # Main notebook for EDA and statistical analysis
+├── ml_salary_models.ipynb                 # Machine learning models and evaluation
+├── FINAL_REPORT.md                        # Final project report
+├── website/
+│   └── index.html                         # Interactive project website
+├── src/                                   # Python scripts for data pipeline
+├── data/
+│   └── processed/                         # Processed and sampled datasets
+├── outputs/
+│   ├── figures/                           # Generated visualizations
+│   └── tables/                            # Generated result tables
 ├── requirements.txt
-├── README.md
+└── README.md
 ```
 
 ---
 
-## 9. How to Run
+## 10. How to Run
 
 1. Install dependencies:
 
@@ -327,7 +357,7 @@ jupyter notebook Developer_Salary_Analysis.ipynb
 
 ---
 
-## 10. Outputs
+## 11. Outputs
 
 All generated outputs are saved in:
 
@@ -338,7 +368,7 @@ outputs/tables/
 
 ---
 
-## 11. Conclusion
+## 12. Conclusion
 
 This project demonstrates that developer salaries are shaped primarily by structural and contextual factors, rather than programming language popularity alone.
 
