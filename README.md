@@ -1,8 +1,10 @@
 ## A Data-Driven Analysis of Developer Salaries:  What Makes a Developer Earn More? 
+
 ---
+
 ### Project Links
 
-- [Final Report](FINAL_REPORT.md)
+- [Final Report PDF](DSA210_Final_Report_Nil_Kadakal.pdf)
 - [Interactive ML Salary Dashboard](https://nilkadakal.github.io/DSA210_NilKadakal/website/)
 - [Machine Learning Notebook](ml_salary_models.ipynb)
 - [Main EDA and Hypothesis Testing Notebook](Developer_Salary_Analysis.ipynb)
@@ -286,7 +288,27 @@ The website summarizes the main results of the project in a visual and interacti
 The salary estimator should not be interpreted as an exact salary prediction tool. Instead, it is designed as an explanatory what-if interface that reflects the main analytical conclusion of the project: country and experience are stronger predictors of salary than programming language popularity alone.
 ---
 
-## 7. Key Findings
+## 7. Final Report
+
+The final project report is provided in PDF format:
+
+[DSA210_Final_Report_Nil_Kadakal.pdf](DSA210_Final_Report_Nil_Kadakal.pdf)
+
+The report is structured according to the DSA210 project guidelines and includes:
+
+- Motivation
+- Data source and data collection process
+- Data cleaning and preparation
+- Exploratory data analysis
+- Hypothesis testing
+- Machine learning methodology and results
+- Key findings
+- Limitations and future work
+- Academic integrity and AI assistance disclosure
+
+The report summarizes the complete project pipeline from the initial proposal stage to the final results.
+
+## 8. Key Findings
 
 - Programming language choice has a significant impact on salary.
 - Remote work is a significant factor in salary differences.
@@ -297,7 +319,7 @@ The salary estimator should not be interpreted as an exact salary prediction too
 
 ---
 
-## 8. Interpretation
+## 9. Interpretation
 
 The results show that **structural factors**, such as experience and work conditions, play a much larger role in determining salary than programming language popularity.
 
@@ -309,29 +331,29 @@ The machine learning results further support this interpretation. While TIOBE po
 
 ---
 
-## 9. Project Structure
+## 10. Project Structure
 
 ```text
 dsa210_salary_project/
 │
-├── Developer_Salary_Analysis.ipynb        # Main notebook for EDA and statistical analysis
-├── ml_salary_models.ipynb                 # Machine learning models and evaluation
-├── FINAL_REPORT.md                        # Final project report
+├── Developer_Salary_Analysis.ipynb          # Main notebook for EDA and statistical analysis
+├── ml_salary_models.ipynb                   # Machine learning models and evaluation
+├── DSA210_Final_Report_Nil_Kadakal.pdf      # Final project report in PDF format
 ├── website/
-│   └── index.html                         # Interactive project website
-├── src/                                   # Python scripts for data pipeline
+│   └── index.html                           # Interactive project website
+├── src/                                     # Python scripts for data pipeline
 ├── data/
-│   └── processed/                         # Processed and sampled datasets
+│   └── processed/                           # Processed and sampled datasets
 ├── outputs/
-│   ├── figures/                           # Generated visualizations
-│   └── tables/                            # Generated result tables
-├── requirements.txt
-└── README.md
+│   ├── figures/                             # Generated visualizations
+│   └── tables/                              # Generated result tables
+├── requirements.txt                         # Python dependencies
+└── README.md                                # Project documentation
 ```
 
 ---
 
-## 10. How to Run
+## 11. How to Run
 
 1. Install dependencies:
 
@@ -359,7 +381,7 @@ jupyter notebook Developer_Salary_Analysis.ipynb
 
 ---
 
-## 11. Outputs
+## 12. Outputs
 
 All generated outputs are saved in:
 
@@ -370,7 +392,7 @@ outputs/tables/
 
 ---
 
-## 12. Conclusion
+## 13. Conclusion
 
 This project demonstrates that developer salaries are shaped primarily by structural and contextual factors, rather than programming language popularity alone.
 
@@ -413,7 +435,7 @@ Computer Science and Engineering
 - Baseline vs Extended Model Comparison
 - Random Forest Feature Importance Analysis
 - Interactive Project Website
-- Final Report
+- Final Report PDF
 - Results Interpretation
 ---
 
